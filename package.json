@@ -1,0 +1,28 @@
+{
+  "name": "node-epub",
+  "version": "0.0.1",
+  "description": "Webapp to make epub books from JSON requests",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danielv123/nodeEpub.git"
+  },
+  "keywords": [
+    "epub"
+  ],
+  "author": "Daniel Vestøl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danielv123/nodeEpub/issues"
+  },
+  "homepage": "https://github.com/Danielv123/nodeEpub#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "nodemon": "^1.10.2",
+    "quick-epub": "^1.0.0"
+  }
+}
