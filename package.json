@@ -4,7 +4,8 @@
   "description": "Webapp to make epub books from JSON requests",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js"
+    "test": "nodemon index.js",
+	"start": "forever index.js"
   },
   "repository": {
     "type": "git",
