@@ -29,10 +29,9 @@ app.post("/epubify", function(req, res) {
 	
 	// book generation methods
 	if(req.body.ebookMethod == "links") {
-		// POST {data:{}, title:"", contents:[{}, {}, ..], bookID}
+		// POST {data:{}, title:"", contents:[{title, url, dataSelector}, {title, url, dataSelector}, ..], bookID}
 		// RETURNS "success" or "failure"
 		// ON "success", send GET to [ip]/books/[bookID].epub
-		// for links mode, req.body.contents = [{url, selector}]
 		var data = {
 			lang: req.body.data.language || 'engrish',
 			title: req.body.title,
@@ -56,8 +55,12 @@ app.post("/epubify", function(req, res) {
 					var $ = cheerio.load(response.body);
 					// console.log("Downloaded chapter " + (ii + 1));
 					data.contents[ii] = {};
-					data.contents[ii].data = $(req.body.contents[ii].dataSelector).html();
-					data.contents[ii].title = "Chapter " + (ii + 1);
+					if(!req.body.contents[ii].dataSelector) {
+						data.contents[ii].data = response.body;
+					} else {
+						data.contents[ii].data = $(req.body.contents[ii].dataSelector).html();
+					}
+					data.contents[ii].title = req.body.contents[ii].title || "Chapter " + (ii + 1);
 					
 					// check if we have downloaded enough chapters
 					let z = 0;
