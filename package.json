@@ -26,6 +26,6 @@
     "express": "^4.14.0",
     "needle": "^1.4.3",
     "nodemon": "^1.10.2",
-    "quick-epub": "^1.0.0"
+    "quick-epub": "^2.0.2"
   }
 }
