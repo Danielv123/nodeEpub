@@ -21,11 +21,13 @@
   },
   "homepage": "https://github.com/Danielv123/nodeEpub#readme",
   "dependencies": {
+    "bluebird": "^3.5.1",
     "body-parser": "^1.15.2",
     "cheerio": "^0.22.0",
     "express": "^4.14.0",
-    "needle": "^1.4.3",
+    "lodash.padstart": "^4.6.1",
+    "needle": "^1.6.0",
     "nodemon": "^1.10.2",
-    "quick-epub": "^2.0.2"
+    "quick-epub": "^2.0.3"
   }
 }
