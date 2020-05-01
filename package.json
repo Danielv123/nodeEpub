@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,8 @@
     "lodash.padstart": "^4.6.1",
     "needle": "^1.6.0",
     "nodemon": "^1.10.2",
-    "quick-epub": "^2.0.3"
-  }
+    "quick-epub": "^2.0.3",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
