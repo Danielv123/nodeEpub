@@ -1,5 +1,5 @@
 FROM node:latest
-RUN apt-get update && curl -sL https://deb.nodesource.com/setup_7.x | bash - && apt-get install -y git nodejs && git clone https://github.com/Danielv123/nodeEpub.git && cd nodeEpub && npm install
+RUN apt-get update &&  apt-get install -y git && git clone https://github.com/Danielv123/nodeEpub.git && cd nodeEpub && npm install
 EXPOSE 80
 WORKDIR nodeEpub
 CMD ["npm", "start"]
