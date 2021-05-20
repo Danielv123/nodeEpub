@@ -24,9 +24,12 @@
     "bluebird": "^3.5.1",
     "body-parser": "^1.15.2",
     "cheerio": "^0.22.0",
+    "cors": "*",
     "express": "^4.14.0",
+    "html-pdf": "^3.0.1",
     "lodash.padstart": "^4.6.1",
     "needle": "^1.6.0",
+    "node-ebook-converter": "^1.0.11",
     "nodemon": "^2.0.3",
     "quick-epub": "^2.0.3"
   }
