@@ -175,8 +175,8 @@ app.post("/epubify", async function (req, res) {
 			let result = await new epubGen(data).promise
 			console.log(result)
 			console.log('book done: ' + req.body.bookID);
-			res.send("success");
 			createOtherFormats()
+			res.send("success");
 		} catch (e) {
 			console.error(e)
 			res.send("failure");
@@ -212,9 +212,13 @@ app.post("/epubify", async function (req, res) {
 			})
 
 			// HTML
-			fs.writeFile(data.output + ".html", data.chapters.map(x => `<h1>${x.title.toLowerCase().includes("ch") ? x.title : "Chapter " + x.title}</h1><div>${x.content}</div>`).join("\r\n"), () => {
+			try {
+				fs.writeFile(data.output + ".html", data.chapters.map(x => `<h1>${x.title.toLowerCase().includes("ch") ? x.title : "Chapter " + x.title}</h1><div>${x.content}</div>`).join("\r\n"), () => {
 
-			})
+				})
+			} catch (e) {
+				console.error("writeFile", e)
+			}
 		}
 	}
 	// res.send("success");
