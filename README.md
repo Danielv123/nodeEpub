@@ -1,9 +1,17 @@
-nodeEpub
+# nodeEpub
 
 [![](https://images.microbadger.com/badges/image/danielvestol/nodeepub.svg)](https://microbadger.com/images/danielvestol/nodeepub "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/danielvestol/nodeepub.svg)](https://microbadger.com/images/danielvestol/nodeepub "Get your own version badge on microbadger.com")
 
 A webservice to be used with the [Fanfiction+](https://greasyfork.org/en/scripts/13768-fanfiction) userscript, but can also be used standalone.
 It generates epub ebooks from JSON post requests. Its that simple. Download the books by doing hostname/bookID.epub
+
+## Usage
+
+### With hosted version:
+
+Connect to `https://ebook.danielv.no/`
+
+### Self hosted version:
 
 Install with git:
 
